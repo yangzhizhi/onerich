@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #18181B;
+  --color-secondary: #3F3F46;
+  --color-cta: #2563EB;
+  --color-cta-hover: #1D4ED8;
+  --color-bg: #FAFAFA;
+  --color-surface: #FFFFFF;
+  --color-text: #09090B;
+  --color-text-muted: #71717A;
+  --color-border: #E4E4E7;
+  --color-success: #16A34A;
+  --color-danger: #DC2626;
+  --color-danger-hover: #B91C1C;
+  --color-hover: #F4F4F5;
+  --color-hover-strong: #E4E4E7;
+  --color-input-bg: #FFFFFF;
+  --color-subtle-bg: #F9FAFB;
+  --color-bar-bg: #F3F4F6;
+  --font-sans: 'IBM Plex Sans', system-ui, -apple-system, sans-serif;
+}
+
+/* Dark mode overrides */
+.dark {
+  --color-primary: #FAFAFA;
+  --color-secondary: #A1A1AA;
+  --color-cta: #3B82F6;
+  --color-cta-hover: #2563EB;
+  --color-bg: #09090B;
+  --color-surface: #18181B;
+  --color-text: #FAFAFA;
+  --color-text-muted: #A1A1AA;
+  --color-border: #27272A;
+  --color-success: #22C55E;
+  --color-danger: #EF4444;
+  --color-danger-hover: #DC2626;
+  --color-hover: #27272A;
+  --color-hover-strong: #3F3F46;
+  --color-input-bg: #27272A;
+  --color-subtle-bg: #1C1C1F;
+  --color-bar-bg: #27272A;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Hide number input spinners */
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type='number'] {
+  -moz-appearance: textfield;
+}
